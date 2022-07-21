@@ -14,7 +14,39 @@
       "avatarColor": "primary",
       "invoiceStatus": "Paid",
       "balance": "$724",
-      "dueDate": "23 May 2022"
+      "dueDate": "23 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4988,
@@ -29,7 +61,39 @@
       "total": 5219,
       "invoiceStatus": "Downloaded",
       "balance": 0,
-      "dueDate": "15 May 2022"
+      "dueDate": "15 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4989,
@@ -44,7 +108,39 @@
       "total": 3719,
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "03 May 2022"
+      "dueDate": "03 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4990,
@@ -59,7 +155,39 @@
       "total": 4749,
       "invoiceStatus": "Sent",
       "balance": 0,
-      "dueDate": "11 May 2022"
+      "dueDate": "11 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4991,
@@ -74,7 +202,39 @@
       "total": 4056,
       "invoiceStatus": "Draft",
       "balance": "$815",
-      "dueDate": "30 May 2022"
+      "dueDate": "30 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4992,
@@ -90,7 +250,39 @@
       "avatarColor": "secondary",
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "24 May 2022"
+      "dueDate": "24 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4993,
@@ -106,7 +298,39 @@
       "avatarColor": "success",
       "invoiceStatus": "Draft",
       "balance": "$407",
-      "dueDate": "22 May 2022"
+      "dueDate": "22 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4994,
@@ -121,7 +345,39 @@
       "total": 4309,
       "invoiceStatus": "Paid",
       "balance": "-$205",
-      "dueDate": "10 May 2022"
+      "dueDate": "10 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4995,
@@ -136,7 +392,39 @@
       "total": 3367,
       "invoiceStatus": "Downloaded",
       "balance": 0,
-      "dueDate": "24 May 2022"
+      "dueDate": "24 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4996,
@@ -151,7 +439,39 @@
       "total": 4776,
       "invoiceStatus": "Downloaded",
       "balance": "$305",
-      "dueDate": "02 May 2022"
+      "dueDate": "02 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4997,
@@ -166,7 +486,39 @@
       "total": 3789,
       "invoiceStatus": "Partial Payment",
       "balance": "$666",
-      "dueDate": "18 May 2022"
+      "dueDate": "18 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4998,
@@ -181,7 +533,39 @@
       "total": 5200,
       "invoiceStatus": "Partial Payment",
       "balance": 0,
-      "dueDate": "17 May 2022"
+      "dueDate": "17 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 4999,
@@ -196,7 +580,39 @@
       "total": 4558,
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "01 May 2022"
+      "dueDate": "01 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5000,
@@ -211,7 +627,39 @@
       "total": 3503,
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "22 May 2022"
+      "dueDate": "22 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5001,
@@ -226,7 +674,39 @@
       "total": 5285,
       "invoiceStatus": "Partial Payment",
       "balance": "-$202",
-      "dueDate": "02 May 2022"
+      "dueDate": "02 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5002,
@@ -241,7 +721,39 @@
       "total": 3668,
       "invoiceStatus": "Downloaded",
       "balance": "$731",
-      "dueDate": "15 May 2022"
+      "dueDate": "15 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5003,
@@ -257,7 +769,39 @@
       "avatarColor": "warning",
       "invoiceStatus": "Sent",
       "balance": "-$344",
-      "dueDate": "17 May 2022"
+      "dueDate": "17 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5004,
@@ -272,7 +816,39 @@
       "total": 3198,
       "invoiceStatus": "Partial Payment",
       "balance": "-$253",
-      "dueDate": "16 May 2022"
+      "dueDate": "16 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5005,
@@ -288,7 +864,39 @@
       "avatarColor": "error",
       "invoiceStatus": "Past Due",
       "balance": 0,
-      "dueDate": "01 May 2022"
+      "dueDate": "01 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5006,
@@ -303,7 +911,39 @@
       "total": 5612,
       "invoiceStatus": "Downloaded",
       "balance": "$883",
-      "dueDate": "12 May 2022"
+      "dueDate": "12 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5007,
@@ -318,7 +958,39 @@
       "total": 2230,
       "invoiceStatus": "Sent",
       "balance": 0,
-      "dueDate": "19 May 2022"
+      "dueDate": "19 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5008,
@@ -333,7 +1005,39 @@
       "total": 2032,
       "invoiceStatus": "Partial Payment",
       "balance": 0,
-      "dueDate": "30 May 2022"
+      "dueDate": "30 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5009,
@@ -348,7 +1052,39 @@
       "total": 3128,
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "10 May 2022"
+      "dueDate": "10 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5010,
@@ -363,7 +1099,39 @@
       "total": 2060,
       "invoiceStatus": "Downloaded",
       "balance": 0,
-      "dueDate": "08 May 2022"
+      "dueDate": "08 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5011,
@@ -379,7 +1147,39 @@
       "avatarColor": "info",
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "01 May 2022"
+      "dueDate": "01 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5012,
@@ -394,7 +1194,39 @@
       "total": 2872,
       "invoiceStatus": "Partial Payment",
       "balance": 0,
-      "dueDate": "18 May 2022"
+      "dueDate": "18 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5013,
@@ -409,7 +1241,39 @@
       "total": 3740,
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "01 May 2022"
+      "dueDate": "01 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5014,
@@ -425,7 +1289,39 @@
       "avatarColor": "primary",
       "invoiceStatus": "Downloaded",
       "balance": 0,
-      "dueDate": "23 May 2022"
+      "dueDate": "23 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5015,
@@ -440,7 +1336,39 @@
       "total": 2477,
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "01 May 2022"
+      "dueDate": "01 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5016,
@@ -456,7 +1384,39 @@
       "avatarColor": "secondary",
       "invoiceStatus": "Paid",
       "balance": "$951",
-      "dueDate": "30 May 2022"
+      "dueDate": "30 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5017,
@@ -471,7 +1431,39 @@
       "total": 3102,
       "invoiceStatus": "Partial Payment",
       "balance": "-$153",
-      "dueDate": "25 May 2022"
+      "dueDate": "25 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5018,
@@ -486,7 +1478,39 @@
       "total": 2483,
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "10 May 2022"
+      "dueDate": "10 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5019,
@@ -501,7 +1525,39 @@
       "total": 2825,
       "invoiceStatus": "Partial Payment",
       "balance": "-$459",
-      "dueDate": "14 May 2022"
+      "dueDate": "14 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5020,
@@ -516,7 +1572,39 @@
       "total": 2029,
       "invoiceStatus": "Past Due",
       "balance": 0,
-      "dueDate": "28 May 2022"
+      "dueDate": "28 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5021,
@@ -532,7 +1620,39 @@
       "avatarColor": "success",
       "invoiceStatus": "Sent",
       "balance": 0,
-      "dueDate": "06 May 2022"
+      "dueDate": "06 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5022,
@@ -548,7 +1668,39 @@
       "avatarColor": "error",
       "invoiceStatus": "Sent",
       "balance": 0,
-      "dueDate": "09 May 2022"
+      "dueDate": "09 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5023,
@@ -563,7 +1715,39 @@
       "total": 5578,
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "23 May 2022"
+      "dueDate": "23 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5024,
@@ -578,7 +1762,39 @@
       "total": 2787,
       "invoiceStatus": "Partial Payment",
       "balance": 0,
-      "dueDate": "25 May 2022"
+      "dueDate": "25 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5025,
@@ -594,7 +1810,39 @@
       "avatarColor": "warning",
       "invoiceStatus": "Downloaded",
       "balance": 0,
-      "dueDate": "07 May 2022"
+      "dueDate": "07 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5026,
@@ -609,7 +1857,39 @@
       "total": 2783,
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "22 May 2022"
+      "dueDate": "22 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5027,
@@ -625,7 +1905,39 @@
       "avatarColor": "info",
       "invoiceStatus": "Sent",
       "balance": 0,
-      "dueDate": "04 May 2022"
+      "dueDate": "04 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5028,
@@ -641,7 +1953,39 @@
       "avatarColor": "primary",
       "invoiceStatus": "Paid",
       "balance": "$361",
-      "dueDate": "02 May 2022"
+      "dueDate": "02 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5029,
@@ -657,7 +2001,39 @@
       "avatarColor": "secondary",
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "25 May 2022"
+      "dueDate": "25 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5030,
@@ -673,7 +2049,39 @@
       "avatarColor": "success",
       "invoiceStatus": "Draft",
       "balance": 0,
-      "dueDate": "06 May 2022"
+      "dueDate": "06 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5031,
@@ -688,7 +2096,39 @@
       "total": 3313,
       "invoiceStatus": "Partial Payment",
       "balance": 0,
-      "dueDate": "09 May 2022"
+      "dueDate": "09 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5032,
@@ -704,7 +2144,39 @@
       "avatarColor": "error",
       "invoiceStatus": "Past Due",
       "balance": 0,
-      "dueDate": "22 May 2022"
+      "dueDate": "22 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5033,
@@ -719,7 +2191,39 @@
       "total": 2869,
       "invoiceStatus": "Partial Payment",
       "balance": 0,
-      "dueDate": "22 May 2022"
+      "dueDate": "22 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5034,
@@ -735,7 +2239,39 @@
       "avatarColor": "warning",
       "invoiceStatus": "Paid",
       "balance": 0,
-      "dueDate": "22 May 2022"
+      "dueDate": "22 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5035,
@@ -751,7 +2287,39 @@
       "avatarColor": "info",
       "invoiceStatus": "Draft",
       "balance": "$762",
-      "dueDate": "12 May 2022"
+      "dueDate": "12 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
     },
     {
       "id": 5036,
@@ -766,7 +2334,81 @@
       "total": 3171,
       "invoiceStatus": "Paid",
       "balance": "-$205",
-      "dueDate": "25 May 2022"
+      "dueDate": "25 May 2022",
+      "discount": 28,
+      "tax": 0.21,
+      "items": [
+        {
+          "item": "Premium Branding Package",
+          "description": "Branding & Promotion",
+          "hours": 48,
+          "qty": 1,
+          "total": 32
+        },
+        {
+          "item": "Social Media",
+          "description": "Social media templates",
+          "hours": 42,
+          "qty": 1,
+          "total": 28
+        },
+        {
+          "item": "Web Design",
+          "description": "Web designing package",
+          "hours": 46,
+          "qty": 1,
+          "total": 24
+        },
+        {
+          "item": "SEO",
+          "description": "Search engine optimization",
+          "hours": 40,
+          "qty": 1,
+          "total": 22
+        }
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "name": "Jordan Stevenson",
+      "address": "7777 Mendez Plains",
+      "company": "Hall-Robbins PLC",
+      "country": "USA",
+      "contact": "(616) 865-4180",
+      "companyEmail": "don85@johnson.com"
+    },
+    {
+      "name": "Stephanie Burns",
+      "address": "04033 Wesley Wall Apt. 961",
+      "company": "Mccann LLC and Sons",
+      "country": "Haiti",
+      "contact": "(226) 204-8287",
+      "companyEmail": "brenda49@taylor.info"
+    },
+    {
+      "name": "Tony Herrera",
+      "address": "5345 Robert Squares",
+      "company": "Leonard-Garcia and Sons",
+      "country": "Denmark",
+      "contact": "(955) 676-1076",
+      "companyEmail": "smithtiffany@powers.com"
+    },
+    {
+      "name": "Kevin Patton",
+      "address": "19022 Clark Parks Suite 149",
+      "company": "Smith, Miller and Henry LLC",
+      "country": "Cambodia",
+      "contact": "(832) 323-6914",
+      "companyEmail": "mejiageorge@lee-perez.com"
+    },
+    {
+      "name": "Mrs. Julie Donovan MD",
+      "address": "8534 Saunders Hill Apt. 583",
+      "company": "Garcia-Cameron and Sons",
+      "country": "Martinique",
+      "contact": "(970) 982-3353",
+      "companyEmail": "brandon07@pierce.com"
     }
   ]
 }

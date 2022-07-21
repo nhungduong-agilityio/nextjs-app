@@ -1,5 +1,5 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import { Layout } from '../models/component'
+import { Layout } from '@models/component'
 import Header from './Header'
 
 const Layout: React.FC<Layout> = ({ children }) => {

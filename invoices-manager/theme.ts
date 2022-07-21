@@ -32,25 +32,30 @@ const Button: ComponentStyleConfig = {
   },
 }
 
+const Badge: ComponentStyleConfig = {
+  baseStyle: {
+    fontWeight: 'normal',
+    textTransform: 'none',
+  },
+}
+
 export const theme = extendTheme({
   components: {
     Button,
+    Badge,
   },
   styles: {
     global: {
       body: {
         color: 'blackAlpha.700',
         bg: 'gray.100',
+        fontSize: 'sm',
       },
       a: {
         color: 'purple.500',
       },
       p: {
-        fontSize: 'sm',
         mb: 1.5,
-      },
-      td: {
-        fontSize: 'sm',
       },
     },
   },
