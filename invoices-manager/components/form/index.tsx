@@ -28,6 +28,7 @@ import Clients from './Clients'
 const Form: React.FC<{ item?: Invoice }> = ({ item }) => {
   const invoice = item || ({} as Invoice)
   const mode = invoice.id ? 'edit' : 'add'
+  const items = invoice.items || []
   return (
     <form>
       <Grid templateColumns="repeat(5, 1fr)" gap={5}>
@@ -37,7 +38,7 @@ const Form: React.FC<{ item?: Invoice }> = ({ item }) => {
           <InvoiceInfo data={invoice} mode={mode} />
 
           <Box px="6">
-            {invoice.items.map((product: InvoiceItem) => (
+            {items.map((product: InvoiceItem) => (
               <Fragment key={product.item}>
                 <Grid
                   templateColumns="repeat(12, 1fr)"
