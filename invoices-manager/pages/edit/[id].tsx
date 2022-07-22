@@ -18,7 +18,7 @@ export default EditInvoice
 export async function getStaticPaths() {
   const invoices = await getInvoices()
   return {
-    paths: invoices.map((invoice: Invoice) => `/preview/${invoice.id}`) || [],
+    paths: invoices.map((invoice: Invoice) => `/edit/${invoice.id}`) || [],
     fallback: true,
   }
 }
