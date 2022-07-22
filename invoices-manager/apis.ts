@@ -1,7 +1,7 @@
 import { Invoice } from '@models/invoice'
 import { User } from '@models/user'
 
-const API_URL = 'http://localhost:4000'
+const API_URL = 'https://invoices-manager-server.herokuapp.com'
 
 const getInvoices = async (offset?: number) =>
   await (await fetch(`${API_URL}/invoices?_page=${offset || 1}`)).json()
