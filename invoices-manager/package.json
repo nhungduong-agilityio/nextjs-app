@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn server && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "cd .. && husky install invoices-manager/.husky",
