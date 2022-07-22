@@ -6,6 +6,7 @@ import {
   Checkbox,
   Flex,
   FormControl,
+  FormErrorMessage,
   FormLabel,
   Heading,
   IconButton,
@@ -16,11 +17,47 @@ import {
   Text,
   useBoolean,
 } from '@chakra-ui/react'
+import { User } from '@models/user'
+import { useMutation } from '@tanstack/react-query'
+import { loginWithEmailAndPassword } from 'apis'
 import { NextPage } from 'next'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { MutableRefObject, useRef, useState } from 'react'
+import { loginValidator, storage, validateLogin } from 'utils'
 
 const Login: NextPage = () => {
+  const router = useRouter()
   const [viewPassword, setViewPassword] = useBoolean()
+  const [errors, setErrors] = useState(loginValidator)
+  const emailRef: MutableRefObject<HTMLInputElement | null> = useRef(null)
+  const passwordRef: MutableRefObject<HTMLInputElement | null> = useRef(null)
+
+  const mutation = useMutation(loginWithEmailAndPassword, {
+    onSuccess: (response: User) => {
+      storage.setToken(response.email)
+      router.push('/')
+    },
+  })
+
+  const handleLogin = () => {
+    const payload = {
+      email: emailRef.current?.value || '',
+      password: passwordRef.current?.value || '',
+    }
+
+    const results = validateLogin(payload, {
+      email: ['required', 'email'],
+      password: ['required', 'password'],
+    })
+
+    if (results.isValid) {
+      mutation.mutate(payload)
+    } else {
+      setErrors(results)
+    }
+  }
+
   return (
     <Box
       bg="white"
@@ -41,36 +78,36 @@ const Login: NextPage = () => {
           <strong>admin</strong>
         </Text>
       </Badge>
-      <form>
-        <FormControl>
-          <FormLabel>Email</FormLabel>
-          <Input type="email" />
-        </FormControl>
-        <FormControl mt="3">
-          <FormLabel>Password</FormLabel>
-          <InputGroup>
-            <Input type={viewPassword ? 'text' : 'password'} />
-            <InputRightElement>
-              <IconButton
-                variant="unstyled"
-                aria-label="View password"
-                icon={viewPassword ? <ViewIcon /> : <ViewOffIcon />}
-                onClick={setViewPassword.toggle}
-              />
-            </InputRightElement>
-          </InputGroup>
-        </FormControl>
-        <Flex my="3">
-          <Checkbox size="md" colorScheme="purple.500">
-            Remember Me
-          </Checkbox>
-          <Spacer />
-          <Link href="/">Forgot Password?</Link>
-        </Flex>
-        <Button w="100%" variant="solid">
-          Login
-        </Button>
-      </form>
+      <FormControl isInvalid={!!errors.messages.email}>
+        <FormLabel>Email</FormLabel>
+        <Input type="email" ref={emailRef} />
+        <FormErrorMessage>{errors.messages.email}</FormErrorMessage>
+      </FormControl>
+      <FormControl mt="3" isInvalid={!!errors.messages.password}>
+        <FormLabel>Password</FormLabel>
+        <InputGroup>
+          <Input type={viewPassword ? 'text' : 'password'} ref={passwordRef} />
+          <InputRightElement>
+            <IconButton
+              variant="unstyled"
+              aria-label="View password"
+              icon={viewPassword ? <ViewIcon /> : <ViewOffIcon />}
+              onClick={setViewPassword.toggle}
+            />
+          </InputRightElement>
+        </InputGroup>
+        <FormErrorMessage>{errors.messages.password}</FormErrorMessage>
+      </FormControl>
+      <Flex my="3">
+        <Checkbox size="md" colorScheme="purple.500">
+          Remember Me
+        </Checkbox>
+        <Spacer />
+        <Link href="/">Forgot Password?</Link>
+      </Flex>
+      <Button w="100%" variant="solid" onClick={handleLogin}>
+        Login
+      </Button>
     </Box>
   )
 }

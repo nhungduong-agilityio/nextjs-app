@@ -1,13 +1,13 @@
-import { Box, Grid, GridItem, Select, Text } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Text } from '@chakra-ui/react'
 import TableComponent from '@components/Table'
 import { memo } from 'react'
-import { Client, Form } from '@models/component'
-import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
+import { Form } from '@models/component'
+import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { getClients } from 'apis'
+import Clients from './Clients'
 
 const InvoiceInfo: React.FC<Form> = ({ data, mode }) => {
   const isPreview = mode === 'view'
-  const { data: clients } = useQuery<Array<Client>>(['clients'], getClients)
 
   return (
     <Grid templateColumns="repeat(2, 1fr)" py="6">
@@ -16,13 +16,9 @@ const InvoiceInfo: React.FC<Form> = ({ data, mode }) => {
         {isPreview ? (
           <Text>{data.name}</Text>
         ) : (
-          <Select w="50%" my="3">
-            {clients?.map((item) => (
-              <option key={item.name} value={item.name}>
-                {item.name}
-              </option>
-            ))}
-          </Select>
+          <Box my="3">
+            <Clients width="50%" />
+          </Box>
         )}
         <Text>{data.company}</Text>
         <Text>{data.address}</Text>

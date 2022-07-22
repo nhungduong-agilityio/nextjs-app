@@ -23,15 +23,17 @@ const TableComponent: React.FC<TableType> = ({
         <Thead>
           <Tr>
             {columns.map((item: Column) => (
-              <Th key={item.name}>{item.name}</Th>
+              <Th key={`${id}_${item.field}`}>{item.name}</Th>
             ))}
           </Tr>
         </Thead>
         <Tbody>
           {data.map((item, index) => (
-            <Tr key={index}>
+            <Tr key={`${id}_${index}`}>
               {columns.map((column) => (
-                <Td key={column.name}>{item[column.field]}</Td>
+                <Td key={`${id}_${column.field}_${index}`}>
+                  {item[column.field]}
+                </Td>
               ))}
             </Tr>
           ))}
