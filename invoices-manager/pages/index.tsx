@@ -16,14 +16,35 @@ import {
   Input,
   Select,
   Text,
+  useToast,
   VStack,
 } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import TableComponent from '../components/Table'
-import { Invoice } from '../models/invoice'
+import TableComponent from '@components/Table'
+import { Invoice } from '@models/invoice'
+import { useState, useTransition } from 'react'
+import { deleteInvoice, getInvoices } from 'apis'
+import {
+  dehydrate,
+  QueryClient,
+  useMutation,
+  useQuery,
+  useQueryClient,
+} from '@tanstack/react-query'
+import Loading from '@components/Loading'
 
 const Home: NextPage = () => {
+  const [offset, setOffset] = useState(1)
+  const [inputValue, setInputValue] = useState('')
+  const [query, setQuery] = useState('')
+  const [, startTransition] = useTransition()
+  const toast = useToast()
+  const queryClient = useQueryClient()
+  const { data } = useQuery<Array<Invoice>>(['invoices', offset], () =>
+    getInvoices(offset)
+  )
+
   const columns = [
     {
       name: '#',
@@ -60,76 +81,83 @@ const Home: NextPage = () => {
     'Partial Payment',
   ]
 
-  const data = [
-    {
-      id: 4987,
-      issuedDate: '13 May 2022',
-      address: '7777 Mendez Plains',
-      company: 'Hall-Robbins PLC',
-      companyEmail: 'don85@johnson.com',
-      country: 'USA',
-      contact: '(616) 865-4180',
-      name: 'Jordan Stevenson',
-      service: 'Software Development',
-      total: 3428,
-      avatarColor: 'primary',
-      invoiceStatus: 'Paid',
-      balance: '$724',
-      dueDate: '23 May 2022',
+  const handlePrev = () => setOffset(offset - 1)
+  const handleNext = () => setOffset(offset + 1)
+
+  const mutation = useMutation(deleteInvoice, {
+    onSuccess: () => {
+      toast({
+        title: 'Delete invoice success',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      })
+      queryClient.invalidateQueries(['invoices', offset])
     },
-    {
-      id: 4988,
-      issuedDate: '17 May 2022',
-      address: '04033 Wesley Wall Apt. 961',
-      company: 'Mccann LLC and Sons',
-      companyEmail: 'brenda49@taylor.info',
-      country: 'Haiti',
-      contact: '(226) 204-8287',
-      name: 'Stephanie Burns',
-      service: 'UI/UX Design & Development',
-      total: 5219,
-      invoiceStatus: 'Downloaded',
-      balance: 0,
-      dueDate: '15 May 2022',
-    },
-  ].map((item) => ({
-    id: <Link href={`/preview/${item.id}`}>{`#${item.id}`}</Link>,
-    client: (
-      <HStack spacing={2}>
-        <Avatar name={item.name} src={'https://bit.ly/broken-link'} />
-        <VStack spacing={1} alignItems="flex-start">
-          <Text as="strong">{item.name}</Text>
-          <Text fontSize="xs">{item.companyEmail}</Text>
-        </VStack>
-      </HStack>
-    ),
-    total: <Text>{`$${item.total}`}</Text>,
-    issuedDate: item.issuedDate,
-    balance: item.balance || (
-      <Badge colorScheme="green" rounded="10" px="2">
-        Paid
-      </Badge>
-    ),
-    actions: (
-      <HStack spacing={3}>
-        <IconButton
-          variant="unstyled"
-          aria-label="Delete invoice"
-          icon={<DeleteIcon />}
-        />
-        <IconButton
-          variant="unstyled"
-          aria-label="View invoice"
-          icon={<ViewIcon />}
-        />
-        <IconButton
-          variant="unstyled"
-          aria-label="Edit invoice"
-          icon={<EditIcon />}
-        />
-      </HStack>
-    ),
-  })) as unknown as Array<Invoice>
+  })
+
+  const handleDeleteInvoice = (id: number) => mutation.mutate(id)
+
+  const handleSearch = (e: { target: { value: string } }) => {
+    const value = e.target.value.trim()
+    setQuery(value)
+
+    startTransition(() => {
+      setInputValue(value)
+    })
+  }
+
+  const displayData = query
+    ? data!.filter((item) => item.id.toString().includes(query))
+    : data
+
+  if (!data) return <Loading />
+
+  const invoices = displayData
+    ? displayData.map((item) => ({
+        id: <Link href={`/preview/${item.id}`}>{`#${item.id}`}</Link>,
+        client: (
+          <HStack spacing={2}>
+            <Avatar name={item.name} src={'https://bit.ly/broken-link'} />
+            <VStack spacing={1} alignItems="flex-start">
+              <Text as="strong">{item.name}</Text>
+              <Text fontSize="xs">{item.companyEmail}</Text>
+            </VStack>
+          </HStack>
+        ),
+        total: <Text>{`$${item.total}`}</Text>,
+        issuedDate: item.issuedDate,
+        balance: item.balance || (
+          <Badge colorScheme="green" rounded="10" px="2">
+            Paid
+          </Badge>
+        ),
+        actions: (
+          <HStack spacing={3}>
+            <IconButton
+              variant="unstyled"
+              aria-label="Delete invoice"
+              icon={<DeleteIcon />}
+              onClick={() => handleDeleteInvoice(item.id)}
+            />
+            <Link href={`/preview/${item.id}`}>
+              <IconButton
+                variant="unstyled"
+                aria-label="View invoice"
+                icon={<ViewIcon />}
+              />
+            </Link>
+            <Link href={`/edit/${item.id}`}>
+              <IconButton
+                variant="unstyled"
+                aria-label="Edit invoice"
+                icon={<EditIcon />}
+              />
+            </Link>
+          </HStack>
+        ),
+      }))
+    : []
 
   return (
     <>
@@ -152,21 +180,33 @@ const Home: NextPage = () => {
       </Box>
       <Box boxShadow="base" p="6" rounded="md" bg="white">
         <HStack spacing="2" justifyContent="flex-end" mb={5}>
-          <Input htmlSize={24} width="auto" placeholder="Search Invoice" />
-          <Button variant="solid">Create Invoice</Button>
+          <Input
+            htmlSize={24}
+            width="auto"
+            placeholder="Search Invoice"
+            onChange={handleSearch}
+            value={inputValue}
+          />
+          <Link href="/add">
+            <Button as="a" variant="solid">
+              Create Invoice
+            </Button>
+          </Link>
         </HStack>
-        <TableComponent columns={columns} data={data} />
+        <TableComponent columns={columns} data={invoices} />
         <HStack spacing="2" justifyContent="flex-end">
-          <Text>1–10 of 50</Text>
           <IconButton
             icon={<ChevronLeftIcon boxSize={6} />}
             variant="unstyled"
             aria-label="Prev rows"
+            disabled={offset === 1}
+            onClick={handlePrev}
           />
           <IconButton
             icon={<ChevronRightIcon boxSize={6} />}
             variant="unstyled"
             aria-label="Next rows"
+            onClick={handleNext}
           />
         </HStack>
       </Box>
@@ -175,3 +215,15 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export async function getStaticProps() {
+  const queryClient = new QueryClient()
+
+  await queryClient.prefetchQuery(['invoices'], () => getInvoices())
+
+  return {
+    props: {
+      dehydratedState: dehydrate(queryClient),
+    },
+  }
+}

@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.invoice-info p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+  line-height: 16px;
+}
+
+.invoice-bill td {
+  padding-inline-start: 0;
+}
+
+.invoice-bill th {
+  display: none;
+}

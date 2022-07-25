@@ -8,26 +8,32 @@ import {
   Tr,
   useId,
 } from '@chakra-ui/react'
-import { Column, Table as TableType } from '../models/component'
-import { Invoice } from '../models/invoice'
+import { Column, Table as TableType } from '@models/component'
 
-const TableComponent: React.FC<TableType> = ({ columns, data, type }) => {
+const TableComponent: React.FC<TableType> = ({
+  columns,
+  data,
+  type,
+  className,
+}) => {
   const id = useId()
   return (
-    <TableContainer id={id}>
+    <TableContainer id={id} className={className}>
       <Table variant={type || 'simple'} size="sm">
         <Thead>
           <Tr>
             {columns.map((item: Column) => (
-              <Th key={item.name}>{item.name}</Th>
+              <Th key={`${id}_${item.field}`}>{item.name}</Th>
             ))}
           </Tr>
         </Thead>
         <Tbody>
-          {data.map((item: Invoice) => (
-            <Tr key={item.name}>
+          {data.map((item, index) => (
+            <Tr key={`${id}_${index}`}>
               {columns.map((column) => (
-                <Td key={column.name}>{item[column.field as keyof Invoice]}</Td>
+                <Td key={`${id}_${column.field}_${index}`}>
+                  {item[column.field]}
+                </Td>
               ))}
             </Tr>
           ))}

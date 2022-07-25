@@ -1,8 +1,23 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import { Layout } from '../models/component'
+import { Layout } from '@models/component'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+import { storage } from 'utils'
 import Header from './Header'
 
 const Layout: React.FC<Layout> = ({ children }) => {
+  const router = useRouter()
+  const handleRedirect = () => {
+    const userLogin = storage.getToken()
+    if (!userLogin) {
+      router.push('/login')
+    }
+  }
+  useEffect(() => {
+    handleRedirect()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <Grid
       templateAreas={`"header header" "main main"`}
