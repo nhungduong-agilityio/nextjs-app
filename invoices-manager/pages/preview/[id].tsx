@@ -9,6 +9,7 @@ import Summary from '@components/form/Summary'
 import Loading from '@components/Loading'
 import { getInvoice, getInvoices } from 'apis'
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
+import { columns } from 'constants/columns'
 
 const Preview: NextPage = () => {
   const { query } = useRouter()
@@ -17,40 +18,18 @@ const Preview: NextPage = () => {
   )
   if (!data) return <Loading />
 
+  const tableData = data.items.map((item) => ({
+    ...item,
+    total: <Text>{`$${item.total}`}</Text>,
+  }))
+
   return (
     <Grid templateColumns="repeat(5, 1fr)" gap={5}>
       <GridItem colSpan={3} boxShadow="base" rounded="md" bg="white">
         <Header data={data} />
         <Divider />
         <InvoiceInfo data={data} />
-        <TableComponent
-          columns={[
-            {
-              name: 'Item',
-              field: 'item',
-            },
-            {
-              name: 'Description',
-              field: 'description',
-            },
-            {
-              name: 'hours',
-              field: 'hours',
-            },
-            {
-              name: 'qty',
-              field: 'qty',
-            },
-            {
-              name: 'Total',
-              field: 'total',
-            },
-          ]}
-          data={data.items.map((item) => ({
-            ...item,
-            total: <Text>{`$${item.total}`}</Text>,
-          }))}
-        />
+        <TableComponent columns={columns.items} data={tableData} />
         <Summary data={data} />
         <Divider />
         <Text p="6">

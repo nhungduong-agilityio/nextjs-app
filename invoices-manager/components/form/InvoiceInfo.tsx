@@ -5,8 +5,10 @@ import { Form } from '@models/component'
 import { dehydrate, QueryClient } from '@tanstack/react-query'
 import { getClients } from 'apis'
 import Clients from './Clients'
+import { defaultBillInfo } from 'constants/invoice'
+import { columns } from 'constants/columns'
 
-const InvoiceInfo: React.FC<Form> = ({ data, mode }) => {
+const InvoiceInfo: React.FC<Form> = ({ data, mode, handleChangeForm }) => {
   const isPreview = mode === 'view'
 
   return (
@@ -17,7 +19,7 @@ const InvoiceInfo: React.FC<Form> = ({ data, mode }) => {
           <Text>{data.name}</Text>
         ) : (
           <Box my="3">
-            <Clients width="50%" />
+            <Clients width="50%" handleChangeForm={handleChangeForm} />
           </Box>
         )}
         <Text>{data.company}</Text>
@@ -31,38 +33,8 @@ const InvoiceInfo: React.FC<Form> = ({ data, mode }) => {
             Bill To:
           </Text>
           <TableComponent
-            columns={[
-              {
-                name: '',
-                field: 'label',
-              },
-              {
-                name: '',
-                field: 'value',
-              },
-            ]}
-            data={[
-              {
-                label: 'Total Due:',
-                value: '$12,110.55',
-              },
-              {
-                label: 'Bank name:',
-                value: 'American Bank',
-              },
-              {
-                label: 'Country:',
-                value: 'United States',
-              },
-              {
-                label: 'IBAN:',
-                value: 'ETD95476213874685',
-              },
-              {
-                label: 'SWIFT code:',
-                value: 'BR91905',
-              },
-            ]}
+            columns={columns.bill}
+            data={defaultBillInfo}
             type="unstyled"
             className="invoice-bill"
           />

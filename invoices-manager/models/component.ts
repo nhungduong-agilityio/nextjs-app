@@ -1,11 +1,11 @@
-import { Invoice } from './invoice'
+import { Invoice, InvoiceItem } from './invoice'
 
 export type Layout = {
   children?: React.ReactNode
 }
 
 export interface Column {
-  name: string
+  name: string | React.ReactNode
   field: string
 }
 
@@ -23,13 +23,10 @@ export interface Table {
 export interface Form {
   data: Invoice
   mode?: string
+  handleChangeForm?: (value: string | InvoiceItem[], name: string) => void
 }
 
-export interface Client {
-  name: string
-  address: string
-  company: string
-  country: string
-  contact: string
-  companyEmail: string
+export interface ClientSelection {
+  width?: string | number
+  handleChangeForm?: (value: string | InvoiceItem[], name: string) => void
 }

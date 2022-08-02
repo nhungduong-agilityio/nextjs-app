@@ -10,7 +10,9 @@ const EditInvoice: NextPage = () => {
   const { data } = useQuery<Invoice>(['invoice', query.id], () =>
     getInvoice(query.id)
   )
-  return <Form item={data} />
+
+  console.log('data', data)
+  return data ? <Form item={data} mode="edit" /> : null
 }
 
 export default EditInvoice

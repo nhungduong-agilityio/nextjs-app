@@ -4,6 +4,7 @@ export interface InvoiceItem {
   hours: number
   qty: number
   total: number
+  key?: string
 }
 
 export interface Invoice {
@@ -23,5 +24,8 @@ export interface Invoice {
   dueDate?: string
   discount: number
   tax: number
-  items: Array<InvoiceItem>
+  items: InvoiceItem[]
+  business?: string
+  sale?: string
+  description?: string
 }

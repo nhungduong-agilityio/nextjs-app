@@ -33,7 +33,6 @@ export const validateLogin = (
             validate.isValid = false
             validate.messages[field as keyof User] = 'Required'
           } else {
-            validate.isValid = true
             validate.messages[field as keyof User] = ''
           }
 
@@ -65,4 +64,16 @@ export const validateLogin = (
   })
 
   return validate
+}
+
+export const formatDate = (date: string) => {
+  const currentDate = new Date(date)
+  let month = `${currentDate.getMonth() + 1}`
+  let day = `${currentDate.getDate()}`
+  const year = currentDate.getFullYear()
+
+  if (month.length < 2) month = `0${month}`
+  if (day.length < 2) day = `0${day}`
+
+  return [year, month, day].join('-')
 }

@@ -18,19 +18,25 @@ const loginWithEmailAndPassword = async (data: User) => {
 }
 const deleteInvoice = async (id: number) =>
   await fetch(`${API_URL}/invoices/${id}`, {
-    method: 'delete',
+    method: 'DELETE',
   })
 
 const createInvoice = async (data: Invoice) =>
   await fetch(`${API_URL}/invoices`, {
-    method: 'post',
+    method: 'POST',
     body: JSON.stringify(data),
+    headers: {
+      'Content-type': 'application/json',
+    },
   })
 
 const updateInvoice = async (data: Invoice) =>
-  await fetch(`${API_URL}/invoicesi/${data.id}`, {
-    method: 'put',
+  await fetch(`${API_URL}/invoices/${data.id}`, {
+    method: 'PUT',
     body: JSON.stringify(data),
+    headers: {
+      'Content-type': 'application/json',
+    },
   })
 
 export {

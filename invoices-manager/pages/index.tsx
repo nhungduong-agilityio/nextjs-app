@@ -33,6 +33,8 @@ import {
   useQueryClient,
 } from '@tanstack/react-query'
 import Loading from '@components/Loading'
+import { columns } from 'constants/columns'
+import { status } from 'constants/invoice'
 
 const Home: NextPage = () => {
   const [offset, setOffset] = useState(1)
@@ -44,43 +46,6 @@ const Home: NextPage = () => {
   const { data } = useQuery<Array<Invoice>>(['invoices', offset], () =>
     getInvoices(offset)
   )
-
-  const columns = [
-    {
-      name: '#',
-      field: 'id',
-    },
-    {
-      name: 'Client',
-      field: 'client',
-    },
-    {
-      name: 'Total',
-      field: 'total',
-    },
-    {
-      name: 'Issued date',
-      field: 'issuedDate',
-    },
-    {
-      name: 'Balance',
-      field: 'balance',
-    },
-    {
-      name: 'Actions',
-      field: 'actions',
-    },
-  ]
-
-  const status = [
-    'none',
-    'Downloaded',
-    'Draff',
-    'Paid',
-    'Past Due',
-    'Partial Payment',
-  ]
-
   const handlePrev = () => setOffset(offset - 1)
   const handleNext = () => setOffset(offset + 1)
 
@@ -193,7 +158,7 @@ const Home: NextPage = () => {
             </Button>
           </Link>
         </HStack>
-        <TableComponent columns={columns} data={invoices} />
+        <TableComponent columns={columns.invoices} data={invoices} />
         <HStack spacing="2" justifyContent="flex-end">
           <IconButton
             icon={<ChevronLeftIcon boxSize={6} />}
