@@ -11,46 +11,48 @@ import {
   useToast,
 } from '@chakra-ui/react'
 
-import { Invoice, InvoiceItem } from '@models/invoice'
+import { Invoice } from '@models/invoice'
 import Header from '@components/form/Header'
 import InvoiceInfo from '@components/form/InvoiceInfo'
 import Summary from '@components/form/Summary'
 import { defaultInvoice } from 'constants/invoice'
 import Items from './Items'
-import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { useMutation } from '@tanstack/react-query'
 import { createInvoice, updateInvoice } from 'apis'
 import { useForm } from 'hooks'
+import { useRouter } from 'next/router'
+import { ROUTERS } from 'constants/routers'
+import Link from 'next/link'
+import { calcTotal } from 'utils'
 
 const Form: React.FC<{ item?: Invoice; mode: string }> = ({ item, mode }) => {
   const id = useId()
   const toast = useToast()
-  const queryClient = useQueryClient()
 
-  const mutation = useMutation(
-    mode === 'edit' ? updateInvoice : createInvoice,
-    {
-      onSuccess: () => {
-        toast({
-          title: `${mode === 'edit' ? 'Edit' : 'Create'} invoice success`,
-          status: 'success',
-          duration: 3000,
-          isClosable: true,
-        })
-        queryClient.invalidateQueries(['invoices'])
-      },
-    }
-  )
+  const router = useRouter()
+  const isEdit = mode === 'edit'
+
+  const mutation = useMutation(isEdit ? updateInvoice : createInvoice, {
+    onSuccess: () => {
+      toast({
+        title: `${isEdit ? 'Edit' : 'Create'} invoice success`,
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      })
+
+      router.push(ROUTERS.LIST)
+    },
+  })
 
   const { handleChangeForm, formState: invoice } = useForm({
     initialState: item || (defaultInvoice as Invoice),
   })
 
-  const items = invoice.items.map((item: InvoiceItem, index: number) => ({
-    ...item,
-    key: `item-${index + 1}`,
-  }))
-
-  const handleSubmit = () => mutation.mutate(invoice)
+  const handleSubmit = () => {
+    const { total } = calcTotal(invoice)
+    return mutation.mutate({ ...invoice, total })
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { value, name } = e.target
@@ -71,7 +73,7 @@ const Form: React.FC<{ item?: Invoice; mode: string }> = ({ item, mode }) => {
           mode={mode}
           handleChangeForm={handleChangeForm}
         />
-        <Items items={items} handleChangeForm={handleChangeForm} />
+        <Items items={invoice.items} handleChangeForm={handleChangeForm} />
         <Summary
           data={invoice}
           mode={mode}
@@ -80,7 +82,12 @@ const Form: React.FC<{ item?: Invoice; mode: string }> = ({ item, mode }) => {
         <Divider />
         <Box p="6">
           <Text as="strong">Note:</Text>
-          <Textarea mt="3" name="description" onChange={handleChange} />
+          <Textarea
+            mt="3"
+            name="description"
+            onChange={handleChange}
+            value={invoice.description}
+          />
         </Box>
       </GridItem>
       <GridItem
@@ -93,7 +100,13 @@ const Form: React.FC<{ item?: Invoice; mode: string }> = ({ item, mode }) => {
       >
         <Flex direction="column">
           <Button variant="solid">Send Invoice</Button>
-          <Button my="3">Preview</Button>
+          {isEdit && (
+            <Link href={`${ROUTERS.PREVIEW}/${invoice.id}`}>
+              <Button as="a" variant="solid" my="3">
+                Preview
+              </Button>
+            </Link>
+          )}
           <Button my="3" onClick={handleSubmit}>
             Save
           </Button>

@@ -1,27 +1,20 @@
 import React, { Fragment } from 'react'
 import { Box, Button, Grid, GridItem, CloseButton } from '@chakra-ui/react'
 
-import { InvoiceItem as InvoiceItemType } from '@models/invoice'
+import { InvoiceItemType, InvoiceItems } from '@models/invoice'
 import { defaultItem } from 'constants/invoice'
 import InvoiceItem from './InvoiceItem'
 
-const Items: React.FC<{
-  items: InvoiceItemType[]
-  handleChangeForm: (value: string | InvoiceItemType[], name: string) => void
-}> = ({ items, handleChangeForm }) => {
-  const len = items.length + 1
+const Items: React.FC<InvoiceItems> = ({ items, handleChangeForm }) => {
   const handleAddItem = () => {
     const list = [...items]
-    list.push({
-      ...defaultItem,
-      key: `item-${len}`,
-    })
+    list.push(defaultItem)
     handleChangeForm(list, 'items')
   }
 
-  const handleRemoveItem = (idx: string) => {
+  const handleRemoveItem = (idx: number) => {
     const list = [...items]
-    const newList = list.filter((item) => item.key !== idx)
+    const newList = list.filter((item, index) => index !== idx)
 
     handleChangeForm(newList, 'items')
   }
@@ -29,10 +22,10 @@ const Items: React.FC<{
   const handleUpdateItems = (
     value: number | string,
     name: string,
-    key: string
+    key: number
   ) => {
     const list = [...items]
-    const idx = list.findIndex((product) => product.key === key)
+    const idx = list.findIndex((product, index) => index === key)
 
     if (idx >= 0) {
       const currentValue = {
@@ -50,8 +43,8 @@ const Items: React.FC<{
 
   return (
     <Box px="6">
-      {items.map((product: InvoiceItemType) => (
-        <Fragment key={product.key}>
+      {items.map((product: InvoiceItemType, index: number) => (
+        <Fragment key={`item-${index + 1}`}>
           <Grid
             templateColumns="repeat(12, 1fr)"
             gap={8}
@@ -63,12 +56,11 @@ const Items: React.FC<{
             mt="8"
           >
             <InvoiceItem
-              product={product}
-              handleChangeForm={handleChangeForm}
+              product={{ ...product, key: index }}
               handleUpdateItems={handleUpdateItems}
             />
             <GridItem colSpan={1} borderLeft="1px" borderColor="gray.100">
-              <CloseButton onClick={() => handleRemoveItem(product.key!)} />
+              <CloseButton onClick={() => handleRemoveItem(index)} />
             </GridItem>
           </Grid>
         </Fragment>

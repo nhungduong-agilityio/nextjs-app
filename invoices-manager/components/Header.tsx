@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, IconButton, Spacer } from '@chakra-ui/react'
+import { ROUTERS } from 'constants/routers'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { MdLogout } from 'react-icons/md'
@@ -8,19 +9,19 @@ const Header: React.FC = () => {
   const router = useRouter()
 
   const handleLogout = () => {
-    router.push('/login')
+    router.push(ROUTERS.LOGIN)
     storage.clearToken()
   }
 
   return (
     <Flex minWidth="max-content" alignItems="center" gap="2" height="100%">
       <Box p="2">
-        <Link href={'/'}>
+        <Link href={ROUTERS.LIST}>
           <Heading size="md">Materio - Invoices Manager</Heading>
         </Link>
       </Box>
       <Spacer />
-      {router.pathname !== '/login' && (
+      {router.pathname !== ROUTERS.LOGIN && (
         <IconButton
           aria-label="logout"
           icon={<MdLogout />}

@@ -19,7 +19,11 @@ const InvoiceInfo: React.FC<Form> = ({ data, mode, handleChangeForm }) => {
           <Text>{data.name}</Text>
         ) : (
           <Box my="3">
-            <Clients width="50%" handleChangeForm={handleChangeForm} />
+            <Clients
+              width="50%"
+              handleChangeForm={handleChangeForm}
+              client={data.name}
+            />
           </Box>
         )}
         <Text>{data.company}</Text>

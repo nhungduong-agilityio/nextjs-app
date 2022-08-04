@@ -1,3 +1,4 @@
+import { Invoice } from '@models/invoice'
 import { User } from '@models/user'
 import { PATTERN } from 'constants/pattern'
 
@@ -76,4 +77,15 @@ export const formatDate = (date: string) => {
   if (day.length < 2) day = `0${day}`
 
   return [year, month, day].join('-')
+}
+
+export const calcTotal = (data: Invoice) => {
+  const items = data.items || []
+  const subtotal = items.reduce((a, b) => a + (b.total || 0), 0)
+  const total = (subtotal + data.discount) * (1 + data.tax) || 0
+
+  return {
+    subtotal,
+    total,
+  }
 }

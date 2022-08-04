@@ -10,6 +10,8 @@ import Loading from '@components/Loading'
 import { getInvoice, getInvoices } from 'apis'
 import { dehydrate, QueryClient, useQuery } from '@tanstack/react-query'
 import { columns } from 'constants/columns'
+import Link from 'next/link'
+import { ROUTERS } from 'constants/routers'
 
 const Preview: NextPage = () => {
   const { query } = useRouter()
@@ -18,7 +20,7 @@ const Preview: NextPage = () => {
   )
   if (!data) return <Loading />
 
-  const tableData = data.items.map((item) => ({
+  const tableData = data.items?.map((item) => ({
     ...item,
     total: <Text>{`$${item.total}`}</Text>,
   }))
@@ -48,7 +50,11 @@ const Preview: NextPage = () => {
       >
         <Flex direction="column">
           <Button variant="solid">Send Invoice</Button>
-          <Button my="3">Edit Invoice</Button>
+          <Link href={`${ROUTERS.EDIT_INVOICE}/${query.id}`}>
+            <Button my="3" variant="solid" as="a">
+              Edit Invoice
+            </Button>
+          </Link>
           <Button variant="solid" bg="green.300">
             Add Payment
           </Button>

@@ -1,10 +1,13 @@
-import { Invoice, InvoiceItem } from '@models/invoice'
+import { Invoice, InvoiceItemType } from '@models/invoice'
 import { useState } from 'react'
 
 export const useForm = ({ initialState }: { initialState: Invoice }) => {
   const [formState, setFormState] = useState(initialState)
 
-  const handleChangeForm = (value: string | InvoiceItem[], field: string) => {
+  const handleChangeForm = (
+    value: string | InvoiceItemType[],
+    field: string
+  ) => {
     setFormState({
       ...formState,
       [field]: value,

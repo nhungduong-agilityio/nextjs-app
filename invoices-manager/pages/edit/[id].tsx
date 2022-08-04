@@ -11,7 +11,6 @@ const EditInvoice: NextPage = () => {
     getInvoice(query.id)
   )
 
-  console.log('data', data)
   return data ? <Form item={data} mode="edit" /> : null
 }
 

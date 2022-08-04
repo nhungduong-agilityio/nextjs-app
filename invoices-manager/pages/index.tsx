@@ -35,6 +35,7 @@ import {
 import Loading from '@components/Loading'
 import { columns } from 'constants/columns'
 import { status } from 'constants/invoice'
+import { ROUTERS } from 'constants/routers'
 
 const Home: NextPage = () => {
   const [offset, setOffset] = useState(1)
@@ -80,7 +81,7 @@ const Home: NextPage = () => {
 
   const invoices = displayData
     ? displayData.map((item) => ({
-        id: <Link href={`/preview/${item.id}`}>{`#${item.id}`}</Link>,
+        id: <Link href={`${ROUTERS.PREVIEW}/${item.id}`}>{`#${item.id}`}</Link>,
         client: (
           <HStack spacing={2}>
             <Avatar name={item.name} src={'https://bit.ly/broken-link'} />
@@ -105,14 +106,14 @@ const Home: NextPage = () => {
               icon={<DeleteIcon />}
               onClick={() => handleDeleteInvoice(item.id)}
             />
-            <Link href={`/preview/${item.id}`}>
+            <Link href={`${ROUTERS.PREVIEW}/${item.id}`}>
               <IconButton
                 variant="unstyled"
                 aria-label="View invoice"
                 icon={<ViewIcon />}
               />
             </Link>
-            <Link href={`/edit/${item.id}`}>
+            <Link href={`${ROUTERS.EDIT_INVOICE}/${item.id}`}>
               <IconButton
                 variant="unstyled"
                 aria-label="Edit invoice"
@@ -123,6 +124,8 @@ const Home: NextPage = () => {
         ),
       }))
     : []
+
+  const isLastPage = invoices.length < 10
 
   return (
     <>
@@ -152,7 +155,7 @@ const Home: NextPage = () => {
             onChange={handleSearch}
             value={inputValue}
           />
-          <Link href="/add">
+          <Link href={ROUTERS.ADD_INVOICE}>
             <Button as="a" variant="solid">
               Create Invoice
             </Button>
@@ -172,6 +175,7 @@ const Home: NextPage = () => {
             variant="unstyled"
             aria-label="Next rows"
             onClick={handleNext}
+            disabled={isLastPage}
           />
         </HStack>
       </Box>

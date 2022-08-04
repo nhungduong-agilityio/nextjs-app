@@ -9,12 +9,11 @@ import {
 } from '@chakra-ui/react'
 import { memo } from 'react'
 import { Form } from '@models/component'
+import { calcTotal } from 'utils'
 
 const Summary: React.FC<Form> = ({ data, mode, handleChangeForm }) => {
   const isPreview = mode === 'view'
-  const items = data.items || []
-  const subtotal = items.reduce((a, b) => a + (b.total || 0), 0)
-  const total = (subtotal + data.discount) * (1 + data.tax) || 0
+  const { subtotal, total } = calcTotal(data)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target
     handleChangeForm!(value, name)
@@ -30,7 +29,12 @@ const Summary: React.FC<Form> = ({ data, mode, handleChangeForm }) => {
         ) : (
           <HStack my="3">
             <strong>Salesperson:</strong>{' '}
-            <Input w="50%" onChange={handleChange} name="sale" />
+            <Input
+              w="50%"
+              onChange={handleChange}
+              name="sale"
+              value={data.sale}
+            />
           </HStack>
         )}
 
@@ -42,6 +46,7 @@ const Summary: React.FC<Form> = ({ data, mode, handleChangeForm }) => {
             placeholder="Thanks for your business"
             onChange={handleChange}
             name="business"
+            value={data.business}
           />
         )}
       </GridItem>

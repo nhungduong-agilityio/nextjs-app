@@ -29,7 +29,6 @@ const defaultBillInfo = [
 ]
 
 const defaultItem = {
-  key: 'item-1',
   item: 'App Design',
   description: '',
   hours: 0,

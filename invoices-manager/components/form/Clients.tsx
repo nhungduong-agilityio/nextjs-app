@@ -4,7 +4,11 @@ import { getClients } from 'apis'
 import { useQuery } from '@tanstack/react-query'
 import { ClientSelection } from '@models/component'
 
-const Clients: React.FC<ClientSelection> = ({ width, handleChangeForm }) => {
+const Clients: React.FC<ClientSelection> = ({
+  width,
+  handleChangeForm,
+  client,
+}) => {
   const { data } = useQuery<Array<Client>>(['clients'], getClients)
   const clients = data || []
 
@@ -13,7 +17,7 @@ const Clients: React.FC<ClientSelection> = ({ width, handleChangeForm }) => {
   }
 
   return (
-    <Select w={width} onChange={handleChange}>
+    <Select w={width} onChange={handleChange} value={client}>
       {clients.map((item) => (
         <option key={item.name} value={item.name}>
           {item.name}

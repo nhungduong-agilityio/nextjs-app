@@ -20,6 +20,7 @@ import {
 import { User } from '@models/user'
 import { useMutation } from '@tanstack/react-query'
 import { loginWithEmailAndPassword } from 'apis'
+import { ROUTERS } from 'constants/routers'
 import { NextPage } from 'next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -36,7 +37,7 @@ const Login: NextPage = () => {
   const mutation = useMutation(loginWithEmailAndPassword, {
     onSuccess: (response: User) => {
       storage.setToken(response.email)
-      router.push('/')
+      router.push(ROUTERS.LIST)
     },
   })
 
@@ -103,7 +104,7 @@ const Login: NextPage = () => {
           Remember Me
         </Checkbox>
         <Spacer />
-        <Link href="/">Forgot Password?</Link>
+        <Link href={ROUTERS.LIST}>Forgot Password?</Link>
       </Flex>
       <Button w="100%" variant="solid" onClick={handleLogin}>
         Login

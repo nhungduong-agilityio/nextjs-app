@@ -8,17 +8,19 @@ import {
   NumberInputStepper,
   NumberIncrementStepper,
   NumberDecrementStepper,
+  Select,
 } from '@chakra-ui/react'
 
-import { InvoiceItem } from '@models/invoice'
-import Clients from './Clients'
+import { InvoiceProduct } from '@models/invoice'
+import { itemsSelection } from 'constants/invoice'
 
-const InvoiceItem: React.FC<{
-  product: InvoiceItem
-  handleChangeForm: (value: string | InvoiceItem[], name: string) => void
-  handleUpdateItems: (value: number | string, name: string, key: string) => void
-}> = ({ product, handleChangeForm, handleUpdateItems }) => {
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+const InvoiceItem: React.FC<InvoiceProduct> = ({
+  product,
+  handleUpdateItems,
+}) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { value, name } = e.target
     handleUpdateItems(value, name, product.key!)
   }
@@ -29,8 +31,19 @@ const InvoiceItem: React.FC<{
         <Text as="strong" position="absolute" top="-6">
           Item
         </Text>
-        <Clients handleChangeForm={handleChangeForm} />
-        <Textarea mt="3" name="description" onChange={handleChange} />
+        <Select onChange={handleChange} value={product.item} name="item">
+          {itemsSelection.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </Select>
+        <Textarea
+          mt="3"
+          name="description"
+          onChange={handleChange}
+          value={product.description}
+        />
       </GridItem>
       <GridItem colSpan={2}>
         <Text as="strong" position="absolute" top="-6">
@@ -40,6 +53,7 @@ const InvoiceItem: React.FC<{
           onChange={(value) =>
             handleUpdateItems(parseInt(value), 'qty', product.key!)
           }
+          value={product.qty}
         >
           <NumberInputField />
           <NumberInputStepper>
@@ -53,6 +67,7 @@ const InvoiceItem: React.FC<{
           Hours
         </Text>
         <NumberInput
+          value={product.hours}
           onChange={(value) =>
             handleUpdateItems(parseInt(value), 'hours', product.key!)
           }
