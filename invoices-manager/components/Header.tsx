@@ -17,7 +17,9 @@ const Header: React.FC = () => {
     <Flex minWidth="max-content" alignItems="center" gap="2" height="100%">
       <Box p="2">
         <Link href={ROUTERS.LIST}>
-          <Heading size="md">Materio - Invoices Manager</Heading>
+          <Heading size="md" as="a">
+            Materio - Invoices Manager
+          </Heading>
         </Link>
       </Box>
       <Spacer />

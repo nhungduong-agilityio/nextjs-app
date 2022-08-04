@@ -1,5 +1,6 @@
 import { Grid, GridItem } from '@chakra-ui/react'
 import { Layout } from '@models/component'
+import { ROUTERS } from 'constants/routers'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { storage } from 'utils'
@@ -10,7 +11,7 @@ const Layout: React.FC<Layout> = ({ children }) => {
   const handleRedirect = () => {
     const userLogin = storage.getToken()
     if (!userLogin) {
-      router.push('/login')
+      router.push(ROUTERS.LOGIN)
     }
   }
   useEffect(() => {

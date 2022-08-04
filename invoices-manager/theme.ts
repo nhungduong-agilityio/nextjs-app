@@ -53,6 +53,7 @@ export const theme = extendTheme({
       },
       a: {
         color: 'purple.500',
+        cursor: 'pointer',
       },
       p: {
         mb: 1.5,
